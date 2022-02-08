@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfileService } from 'projects/dynamic-components/src/app/services/profile.service';
 
 @Component({
   selector: 'app-guest-card',
-  templateUrl: './guest-card.component.html',
-  styleUrls: ['./guest-card.component.scss']
+  templateUrl: './guest-card.component.html' 
 })
-export class GuestCardComponent implements OnInit {
+export class GuestCardComponent  {
+  constructor(private profileService: ProfileService) {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  login() {
+    this.profileService.login();
   }
-
 }

@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { GuestCardComponent } from './guest-card/guest-card.component';
-import { UserCardComponent } from './user-card/user-card.component';
+import { AppComponent } from './app.component'; 
+import { ProfileHostDirective } from './profile/profile-host.directive';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    GuestCardComponent,
-    UserCardComponent
+    AppComponent, 
+    ProfileHostDirective,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

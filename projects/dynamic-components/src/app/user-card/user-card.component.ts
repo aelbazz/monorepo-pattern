@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfileService } from 'projects/dynamic-components/src/app/services/profile.service';
 
 @Component({
   selector: 'app-user-card',
-  templateUrl: './user-card.component.html',
-  styleUrls: ['./user-card.component.scss']
+  templateUrl: './user-card.component.html'
 })
-export class UserCardComponent implements OnInit {
+export class UserCardComponent {
+  constructor(private profileService: ProfileService) {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  logout() {
+    this.profileService.logout();
   }
-
-}
+} 
